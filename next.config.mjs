@@ -1,4 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.pinimg.com", // Pinterest image CDN
+      },
+      {
+        protocol: "https",
+        hostname: "s.pinimg.com", // Pinterest assets (icons/scripts)
+      },
+    ],
+  },
+};
 
 export default nextConfig;
