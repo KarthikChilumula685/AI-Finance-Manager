@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
+  images: {
     remotePatterns: [
       {
         protocol: "https",
@@ -11,6 +11,12 @@ const nextConfig = {
         hostname: "s.pinimg.com", // Pinterest assets (icons/scripts)
       },
     ],
+  },
+
+  experimental: {
+    serverActions: {
+      bodySizeLimit: "5mb",
+    },
   },
 };
 
